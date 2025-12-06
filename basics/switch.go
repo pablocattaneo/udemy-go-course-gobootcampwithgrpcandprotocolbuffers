@@ -22,6 +22,19 @@ func main() {
 		println("Invalid day")
 	}
 
+	// using operators in switch
+
+	numberForSwitchOperatorExample := 15
+
+	switch {
+	case numberForSwitchOperatorExample < 10:
+		println("Less than 10")
+	case numberForSwitchOperatorExample >= 10 && numberForSwitchOperatorExample <= 20:
+		println("Between 10 and 20")
+	case numberForSwitchOperatorExample > 20:
+		println("Greater than 20")
+	}
+
 	number := 2
 
 	switch number {
@@ -31,5 +44,22 @@ func main() {
 		println("Even number")
 	default:
 		println("Number is out of range")
+	}
+
+	// fallthrough example
+	grade := 'B'
+
+	switch grade {
+	case 'A':
+		println("Excellent!")
+	case 'B':
+		println("Well done")
+		fallthrough
+	case 'C':
+		println("You passed")
+	case 'D':
+		println("Better try again")
+	default:
+		println("Invalid grade")
 	}
 }
